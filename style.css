@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.sideBar {
+  width: 20%;
+  position: fixed;
+  background-color: #d9d9d9;
+  bottom: 0;
+  top: 0;
+  left: 0;
+}
+
+.search_bar {
+  background-color: white;
+  padding: 6px;
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+}
+
+.search_bar > input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.admin_details {
+  position: absolute;
+  bottom: 0;
+  background-color: #939393;
+  height: 40px;
+  width: 100%;
+  z-index: 100;
+}
+
+.products {
+  margin: 10px;
+}
+
+.products > h2 {
+  border-bottom: 1px solid black;
+}
+
+.products > p {
+  padding-left: 5px;
+  padding-top: 10px;
+  border-bottom: 1px solid rgba(138, 138, 138, 0.609);
+  cursor: pointer;
+}
+
+.category {
+  margin: 10px;
+}
+
+.category > h2 {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.category > p {
+  padding-left: 5px;
+  padding-top: 10px;
+  border-bottom: 1px solid rgba(138, 138, 138, 0.609);
+  cursor: pointer;
+}
+
+.new_products {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.new_products > button {
+  width: 100%;
+  margin-inline: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* All new products page */
+
+.all_new_products_container,
+.add_product_by_click,
+.purses_container,
+.lipstics_container {
+  margin-left: 20%;
+}
+
+.heading_container {
+  background-color: gainsboro;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgb(63, 63, 63);
+}
+
+.products_lists {
+  padding: 20px;
+}
+
+.product {
+  width: 98%;
+  background-color: #9713cd;
+  color: white;
+  border-radius: 10px;
+  margin-block: 20px;
+  padding: 10px;
+  box-shadow: 4px 5px 10px #c9c9c9;
+  position: relative;
+}
+
+.tag {
+  padding-block: 10px;
+  border-bottom: 1px solid rgb(60, 60, 60);
+}
+
+.pro_details {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 20px;
+}
+
+.options {
+  margin-block: 10px;
+}
+
+.options > button {
+  padding: 7px;
+  border-radius: 6px;
+  border: none;
+  width: 7%;
+  cursor: pointer;
+}
+
+.options > button:nth-child(1) {
+  background-color: rgb(0, 153, 255);
+  color: white;
+}
+
+.options > button:nth-child(2) {
+  background-color: rgb(219, 0, 0);
+  color: white;
+}
+
+.product_details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-block-start: 60px;
+  padding: 60px;
+}
+
+.product_details > input {
+  padding: 10px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.product_details > select {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.name_price {
+  display: flex;
+  gap: 10px;
+}
+
+.name_price > input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+/* Purses */
+
+.all_purses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.purse {
+  margin: 10px;
+  padding: 10px;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.purse > img {
+  width: 200px;
+  border-radius: 5px;
+}
+
+.purse > div {
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 10px;
+}
+
+.purse > div > button {
+  width: 32%;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  margin-block-start: 10px;
+}
+
+.add_new_purses {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.add_new_purses > button {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add_purses_form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+}
+
+.add_purses_form > input{
+  padding: 5px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.add_purses_form > button{
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(191, 191, 191);
+}
+
+.p_image > img{
+  width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 24px;
+    top: 58px;
+    border-radius: 5px;
+}
+
+/* Lipstics */
+
+.category_lips {
+  display: flex;
+    flex-wrap: wrap;
+}
+
+.lipstics{
+  background-color: whitesmoke;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.lipstics > img{
+  width: 200px;
+  height: 200px;
+}
+
+.lipstics > div {
+  display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.lipstics > div > input {
+  width: 60px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.lipstics > div > button{
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.lipstics > .brand {
+  text-align: center;
+  font-size: 20px;
+}
+
+.lipstics > .clr{
+  margin-bottom: 4px;
+    border-bottom: 1px solid gray;
+}
+
+.lipstics > .amt{
+  margin-bottom: 4px;
+    border-bottom: 1px solid gray;
+}
+
+.add_lipstics_form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.add_lipstics_form > input {
+  padding: 5px;
+  border: 2px solid #c1c1c1;
+  border-radius: 5px;
+}
+
+.add_lipstics_form > button {
+  padding: 5px;
+}

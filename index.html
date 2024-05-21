@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dabooo Cosmetic</title>
+  </head>
+  <body>
+    <!-- Side Bar -->
+    <div class="sideBar">
+      <div class="search_bar">
+        <i>Icon</i>
+        <input type="text" placeholder="Search Here..." />
+      </div>
+      <div class="products">
+        <h2>Products</h2>
+        <p id="allProduct_btn">All New Products</p>
+        <p>Offered Products</p>
+        <p>Latest Products</p>
+        <p>Discounted Products</p>
+      </div>
+      <div class="category">
+        <h2>Category</h2>
+        <p id="lipstics_btn">Lipstics</p>
+        <p>Nail Paints</p>
+        <p>Perfumes</p>
+        <p>MakeUp</p>
+        <p>Bangles</p>
+        <p id="purses_btn">Purses</p>
+      </div>
+      <div class="new_products">
+        <button id="addProduct_btn">Add new product</button>
+      </div>
+      <div class="admin_details">
+        <div class="admin_name">
+          <img src="" alt="" />
+          <h3>Name</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- All New Products Page -->
+    <div
+      class="all_new_products_container"
+      style="display: block"
+      id="allProducts"
+    >
+      <div class="heading_container">
+        <h2>Dabooo Cosmetics "All New Products List"</h2>
+      </div>
+
+      <div class="products_lists" id="productsList">
+        <div class="product">
+          <div class="tag">Make Up</div>
+          <div class="pro_details">
+            <div class="name">
+              <p>Eyeliner</p>
+              <p>$100</p>
+            </div>
+            <div class="p_image"></div>
+          </div>
+          <div class="options">
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="tag">Make Up</div>
+          <div class="pro_details">
+            <div class="name">
+              <p>Eyeliner</p>
+              <p>$100</p>
+            </div>
+            <div class="p_image">whatever</div>
+          </div>
+          <div class="options">
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add new product Button -->
+    <div class="add_product_by_click" style="display: none" id="addProducts">
+      <div class="heading_container">
+        <h2>Dabooo Cosmetics "Add Product"</h2>
+      </div>
+      <div class="product_details">
+        <div class="name_price">
+          <input type="text" id="productName" placeholder="Product Name" />
+          <input type="number" id="productPrice" placeholder="$ Price" />
+          <input type="file" id="products_Image" accept="image/*" />
+        </div>
+        <input
+          type="text"
+          id="productDescription"
+          placeholder="Description 'OPTIONAL'"
+        />
+        <select id="productCategory">
+          <option selected>--SELECT--</option>
+          <option value="Lipstic">Lipstic</option>
+          <option value="Foundation">Foundation</option>
+          <option value="Sunscream">Sunscream</option>
+        </select>
+        <button id="saveProduct">Save</button>
+      </div>
+    </div>
+
+    <!-- Purses Container -->
+    <div class="purses_container" style="display: none" id="purses">
+      <div class="heading_container">
+        <h2>Dabooo Cosmetics "Purses"</h2>
+        <div class="add_new_purses">
+          <button id="addPurses">Add New Purse</button>
+        </div>
+      </div>
+      <div class="add_purses_form" id="add_purses_form" style="display: none">
+        <input type="text" id="purseColor" placeholder="Color" />
+        <input type="number" id="pursePrice" placeholder="$ Price" />
+        <input type="file" id="purseImage" accept="image/*" />
+        <button id="savePurses">Save</button>
+      </div>
+      <div class="all_purses" id="all_purses">
+        <!-- Dynamic content will be injected here -->
+      </div>
+    </div>
+
+    <!-- Lipstics -->
+    <div class="lipstics_container" style="display: none" id="lipsticss">
+      <div class="heading_container">
+        <h2>Dabooo Cosmetics "Lipstics"</h2>
+        <div class="add_new_lipstics">
+          <button id="addLipstics">Add New Brand</button>
+        </div>
+      </div>
+      <div class="add_lipstics_form" id="add_lipstics_form" style="display: none">
+        <input type="text" id="lipsticCat" placeholder="Brand" />
+        <input type="text" id="lipsticColor" placeholder="Color" />
+        <input type="number" id="lipsticPrice" placeholder="$ Price">
+        <input type="file" id="lipsticsImage" accept="image/*" />
+        <button id="saveLipstics">Save</button>
+      </div>
+      <div class="category_lips" id="category_lips">
+        <div class="lipstics">
+          <img src="images/lipstics.webp" alt="" />
+          <p class="brand">Swiss Beauty</p>
+          <p class="clr">Color</p>
+          <p class="amt">Price</p>
+          <div>
+            <p>Quantity</p>
+            <button id="decreaseBtn">-</button>
+            <input type="number" id="quantityInput" value="0" readonly />
+            <button id="increaseBtn">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="purses.js"></script>
+    <script src="lipstics.js"></script>
+  </body>
+</html>
