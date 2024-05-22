@@ -57,6 +57,7 @@ const displayLipstics = () => {
     const key = localStorage.key(i);
     if (key.startsWith("lipstics_")) {
       const lipsticsData = JSON.parse(localStorage.getItem(key));
+
       const cat_lipstics_div = document.createElement("div");
       cat_lipstics_div.className = "lipstics";
 

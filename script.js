@@ -8,6 +8,13 @@ const addProducts = document.getElementById("addProducts");
 const purses = document.getElementById("purses");
 const lipsticss = document.getElementById("lipsticss");
 
+// all pages 
+const face_make_up_product = document.getElementById('face_make_up_products')
+const eyes_make_up_product = document.getElementById('eyes_make_up_products')
+
+// Main page
+const noPage = document.getElementById("no_page_is_open");
+
 const saveProduct_btn = document.getElementById("saveProduct");
 const productsList = document.getElementById("productsList");
 
@@ -21,7 +28,7 @@ allProduct_btn.addEventListener("click", () => {
     allProducts.style.display = "block";
     addProducts.style.display = "none";
     purses.style.display = "none";
-    lipsticss.style.display = "none"
+    lipsticss.style.display = "none";
     displayProducts();
   } else {
     allProducts.style.display = "block";
@@ -36,7 +43,7 @@ addProduct_btn.addEventListener("click", () => {
     addProducts.style.display = "block";
     allProducts.style.display = "none";
     purses.style.display = "none";
-    lipsticss.style.display = "none"
+    lipsticss.style.display = "none";
   } else {
     addProducts.style.display = "block";
   }
@@ -50,22 +57,22 @@ purses_btn.addEventListener("click", () => {
     purses.style.display = "block";
     addProducts.style.display = "none";
     allProducts.style.display = "none";
-    lipsticss.style.display = "none"
+    lipsticss.style.display = "none";
   } else {
     purses.style.display = "block";
   }
 });
 
-lipstics_btn.addEventListener('click', () => {
-    if (lipsticss.style.display === "none" || lipsticss.style.display === "") {
-      lipsticss.style.display = "block"
-      purses.style.display = "none";
+lipstics_btn.addEventListener("click", () => {
+  if (lipsticss.style.display === "none" || lipsticss.style.display === "") {
+    lipsticss.style.display = "block";
+    purses.style.display = "none";
     addProducts.style.display = "none";
     allProducts.style.display = "none";
   } else {
-    lipsticss.style.display = "block"
+    lipsticss.style.display = "block";
   }
-})
+});
 
 saveProduct_btn.addEventListener("click", () => {
   const productName = document.getElementById("productName").value;

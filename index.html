@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dhurjati&family=Inter:wght@100..900&family=League+Spartan:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Dabooo Cosmetic</title>
   </head>
@@ -10,26 +20,30 @@
     <!-- Side Bar -->
     <div class="sideBar">
       <div class="search_bar">
-        <i>Icon</i>
+        <span class="material-symbols-outlined"> search </span>
         <input type="text" placeholder="Search Here..." />
       </div>
-      <div class="products">
-        <h2>Products</h2>
-        <p id="allProduct_btn">All New Products</p>
-        <p>Offered Products</p>
-        <p>Latest Products</p>
-        <p>Discounted Products</p>
+      <div class="products" style="display: none">
+        
       </div>
       <div class="category">
-        <h2>Category</h2>
-        <p id="lipstics_btn">Lipstics</p>
-        <p>Nail Paints</p>
-        <p>Perfumes</p>
-        <p>MakeUp</p>
-        <p>Bangles</p>
+        <h2>Makup</h2>
+        <p id="face_product_btn">Face</p>
+        <p id="eye_product_btn">Eyes</p>
+        <p id="lipstics_btn">Lips</p>
+        <p>Cheeks</p>
+        <p>Tools</p>
+
+        <h2>Cosmetics Items</h2>
+        <p>Skincare</p>
+        <p>Haircare</p>
+        <p>Body Care</p>
+        <p>Nail Care</p>
+        <p>Fragrance</p>
+        <p>Additional Tools</p>
         <p id="purses_btn">Purses</p>
       </div>
-      <div class="new_products">
+      <div class="new_products" style="display: none;">
         <button id="addProduct_btn">Add new product</button>
       </div>
       <div class="admin_details">
@@ -40,10 +54,503 @@
       </div>
     </div>
 
+    <!-- NO PAGE IS OPEN -->
+    <div class="no_page_is_open" id="no_page_is_open" style="display: none;">
+      <div class="main-heading">
+        <h2>: ) No page is open yet</h2>
+      </div>
+    </div>
+
+    <!-- Face Make Up Items -->
+    <div class="face_make_up_products" id="face_make_up_products" style="display: block;">
+      <div class="heading_container">
+        <h2>Dabooo Cosmetics "Face Make Up"</h2>
+        <button id="addNewMakeUp">Add New Item</button>
+      </div>
+      <div id="productFormContainer" style="display: none;">
+        <div id="FaceProductForm">
+          <label for="productCategory">Category:</label>
+          <select id="productCategory">
+            <option selected>--SELECT--</option>
+            <option value="Foundation">Foundation</option>
+            <option value="Concealer">Concealer</option>
+            <option value="Powder">Powder</option>
+            <option value="Blush">Blush</option>
+            <option value="Bronzer">Bronzer</option>
+            <option value="Highlighter">Highlighter</option>
+            <option value="Primer">Primer</option>
+            <!-- Add other categories as needed -->
+          </select>
+          <label for="productBrand">Brand:</label>
+          <input type="text" id="productBrand" required>
+          <label for="productPrice">Price:</label>
+          <input type="number" id="productPrice" required>
+          <label for="productColor">Color:</label>
+          <input type="text" id="productColor" required>
+          <label for="productImage">Image:</label>
+          <input type="file" id="productImage" required>
+          <button type="submit" id="submitNewProduct">Save Product</button>
+        </div>
+      </div>
+      <div class="Foundation" id="Foundation">
+        <div class="foundation_heading">
+          <h2>Foundation</h2>
+        </div>
+        <div class="foundation_products">
+          <div class="_product">
+            <img src="images/lipstics.webp" alt="">
+            <div class="quantity">
+              <p>Brand</p>
+              <p>Color</p>
+              <p>Quantity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Concealer" id="Concealer">
+        <div class="concealer_heading">
+          <h2>Concealer</h2>
+        </div>
+        <div class="concealer_products">
+          <div class="_product">
+            <img src="images/lipstics.webp" alt="">
+            <div class="quantity">
+              <p>Brand</p>
+              <p>Color</p>
+              <p>Quantity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Powder" id="Powder">
+        <div class="powder_heading">
+          <h2>Powder</h2>
+        </div>
+        <div class="powder_products">
+        </div>
+      </div>
+      <div class="Blush" id="Blush">
+        <div class="blush_heading">
+          <h2>Blush</h2>
+        </div>
+        <div class="blush_products">
+        </div>
+      </div>
+      <div class="Bronzer" id="Bronzer">
+        <div class="bronzer_heading">
+          <h2>Bronzer</h2>
+        </div>
+        <div class="bronzer_products">
+        </div>
+      </div>
+      <div class="Highlighter" id="Highlighter">
+        <div class="highlighter_heading">
+          <h2>Highlighter</h2>
+        </div>
+        <div class="highlighter_products">
+        </div>
+      </div>
+      <div class="Primer" id="Primer">
+        <div class="primer_heading">
+          <h2>Primer</h2>
+        </div>
+        <div class="primer_products">
+        </div>
+      </div>
+    </div>
+    <!-- Eyes Make Up Items -->
+    <div class="eyes_make_up_products" id="eyes_make_up_products" style="display: none;">
+      <div class="heading_container">
+        <h2>Dabooo Cosmetics "Eye Make Up"</h2>
+        <button id="addNewEyeMakeUp">Add New Item</button>
+      </div>
+      <div id="EyeproductFormContainer" style="display: none;">
+        <div id="EyesProductForm">
+          <label for="eyeproductCategory">Category:</label>
+          <select id="eyeproductCategory">
+            <option selected>--SELECT--</option>
+            <option value="Eyeshadow">Eyeshadow</option>
+            <option value="Eyeliner">Eyeliner</option>
+            <option value="Mascara">Mascara</option>
+            <option value="Eyebrow Pencil">Eyebrow Pencil</option>
+            <option value="Eyebrow Gel">Eyebrow Gel</option>
+            <option value="Eyelash Curler">Eyelash Curler</option>
+            <option value="Eye Primer">Eye Primer</option>
+            <!-- Add other categories as needed -->
+          </select>
+          <label for="EyeproductBrand">Brand:</label>
+          <input type="text" id="EyeproductBrand" required>
+          <label for="EyeproductPrice">Price:</label>
+          <input type="number" id="EyeproductPrice" required>
+          <label for="EyeproductColor">Color:</label>
+          <input type="text" id="EyeproductColor" required>
+          <label for="EyeproductImage">Image:</label>
+          <input type="file" id="EyeproductImage" required>
+          <button type="submit" id="submitNewEyeProduct">Save Product</button>
+        </div>
+      </div>
+      <div class="Eyeshadow" id="Eyeshadow">
+        <div class="Eyeshadow_heading">
+          <h2>Eyeshadow</h2>
+        </div>
+        <div class="Eyeshadow_products">
+          <div class="_eye_product">
+            <img src="images/lipstics.webp" alt="">
+            <div class="quantity">
+              <p>Brand</p>
+              <p>Color</p>
+              <p>Quantity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Eyeliner" id="Eyeliner">
+        <div class="Eyeliner_heading">
+          <h2>Eyeliner</h2>
+        </div>
+        <div class="Eyeliner_products">
+          <div class="_product">
+            <img src="images/lipstics.webp" alt="">
+            <div class="quantity">
+              <p>Brand</p>
+              <p>Color</p>
+              <p>Quantity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Mascara" id="Mascara">
+        <div class="Mascara_heading">
+          <h2>Mascara</h2>
+        </div>
+        <div class="Mascara_products">
+        </div>
+      </div>
+      <div class="Eyebrow" id="Eyebrow">
+        <div class="Eyebrow_heading">
+          <h2>Eyebrow Pencil</h2>
+        </div>
+        <div class="Eyebrow_products">
+        </div>
+      </div>
+      <div class="Eyebrow_Gel" id="Eyebrow_Gel">
+        <div class="Eyebrow_Gel_heading">
+          <h2>Eyebrow Gel</h2>
+        </div>
+        <div class="Eyebrow_Gel_products">
+        </div>
+      </div>
+      <div class="Eyelash_Curler" id="Eyelash_Curler">
+        <div class="Eyelash_Curler_heading">
+          <h2>Eyelash Curler</h2>
+        </div>
+        <div class="Eyelash_Curler_products">
+        </div>
+      </div>
+      <div class="Eye_Primer" id="Eye_Primer">
+        <div class="Eye_Primer_heading">
+          <h2>Eye Primer</h2>
+        </div>
+        <div class="Eye_Primer_products">
+        </div>
+      </div>
+    </div>
+    <!-- Lipstic Make Up Items -->
+    <div class="lips_make_up_products" id="lips_make_up_products" style="display: none;">
+      <div class="heading_container">
+        <h2>Dabooo Cosmetics "Lips Make Up"</h2>
+        <button id="addNewLipsMakeUp">Add New Item</button>
+      </div>
+      <div id="LipsproductFormContainer" style="display: none;">
+        <div id="LipsProductForm">
+          <label for="lipsproductCategory">Category:</label>
+          <select id="lipsproductCategory">
+            <option selected>--SELECT--</option>
+            <option value="Eyeshadow">Eyeshadow</option>
+            <option value="Eyeliner">Eyeliner</option>
+            <option value="Mascara">Mascara</option>
+            <option value="Eyebrow Pencil">Eyebrow Pencil</option>
+            <option value="Eyebrow Gel">Eyebrow Gel</option>
+            <option value="Eyelash Curler">Eyelash Curler</option>
+            <option value="Eye Primer">Eye Primer</option>
+            <!-- Add other categories as needed -->
+          </select>
+          <label for="LipsproductBrand">Brand:</label>
+          <input type="text" id="LipsproductBrand" required>
+          <label for="LipsproductPrice">Price:</label>
+          <input type="number" id="LipsproductPrice" required>
+          <label for="LipsproductColor">Color:</label>
+          <input type="text" id="LipsproductColor" required>
+          <label for="LipsproductImage">Image:</label>
+          <input type="file" id="LipsproductImage" required>
+          <button type="submit" id="submitNewLipsProduct">Save Product</button>
+        </div>
+      </div>
+      <div class="Eyeshadow" id="Eyeshadow">
+        <div class="Eyeshadow_heading">
+          <h2>Eyeshadow</h2>
+        </div>
+        <div class="Eyeshadow_products">
+          <div class="_eye_product">
+            <img src="images/lipstics.webp" alt="">
+            <div class="quantity">
+              <p>Brand</p>
+              <p>Color</p>
+              <p>Quantity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Eyeliner" id="Eyeliner">
+        <div class="Eyeliner_heading">
+          <h2>Eyeliner</h2>
+        </div>
+        <div class="Eyeliner_products">
+          <div class="_product">
+            <img src="images/lipstics.webp" alt="">
+            <div class="quantity">
+              <p>Brand</p>
+              <p>Color</p>
+              <p>Quantity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Mascara" id="Mascara">
+        <div class="Mascara_heading">
+          <h2>Mascara</h2>
+        </div>
+        <div class="Mascara_products">
+        </div>
+      </div>
+      <div class="Eyebrow" id="Eyebrow">
+        <div class="Eyebrow_heading">
+          <h2>Eyebrow Pencil</h2>
+        </div>
+        <div class="Eyebrow_products">
+        </div>
+      </div>
+      <div class="Eyebrow_Gel" id="Eyebrow_Gel">
+        <div class="Eyebrow_Gel_heading">
+          <h2>Eyebrow Gel</h2>
+        </div>
+        <div class="Eyebrow_Gel_products">
+        </div>
+      </div>
+      <div class="Eyelash_Curler" id="Eyelash_Curler">
+        <div class="Eyelash_Curler_heading">
+          <h2>Eyelash Curler</h2>
+        </div>
+        <div class="Eyelash_Curler_products">
+        </div>
+      </div>
+      <div class="Eye_Primer" id="Eye_Primer">
+        <div class="Eye_Primer_heading">
+          <h2>Eye Primer</h2>
+        </div>
+        <div class="Eye_Primer_products">
+        </div>
+      </div>
+    </div>
+    <!-- Cheeks Make Up Items -->
+    <div class="cheeks_make_up_products" id="cheeks_make_up_products" style="display: none;">
+      <div class="heading_container">
+        <h2>Dabooo Cosmetics "Eye Make Up"</h2>
+        <button id="addNewcheeksMakeUp">Add New Item</button>
+      </div>
+      <div id="cheeksproductFormContainer" style="display: none;">
+        <div id="cheeksProductForm">
+          <label for="cheeksproductCategory">Category:</label>
+          <select id="cheeksproductCategory">
+            <option selected>--SELECT--</option>
+            <option value="Eyeshadow">Eyeshadow</option>
+            <option value="Eyeliner">Eyeliner</option>
+            <option value="Mascara">Mascara</option>
+            <option value="Eyebrow Pencil">Eyebrow Pencil</option>
+            <option value="Eyebrow Gel">Eyebrow Gel</option>
+            <option value="Eyelash Curler">Eyelash Curler</option>
+            <option value="Eye Primer">Eye Primer</option>
+            <!-- Add other categories as needed -->
+          </select>
+          <label for="cheeksproductBrand">Brand:</label>
+          <input type="text" id="cheeksproductBrand" required>
+          <label for="cheeksproductPrice">Price:</label>
+          <input type="number" id="cheeksproductPrice" required>
+          <label for="cheeksproductColor">Color:</label>
+          <input type="text" id="cheeksproductColor" required>
+          <label for="cheeksproductImage">Image:</label>
+          <input type="file" id="cheeksproductImage" required>
+          <button type="submit" id="submitNewCheekProduct">Save Product</button>
+        </div>
+      </div>
+      <div class="Eyeshadow" id="Eyeshadow">
+        <div class="Eyeshadow_heading">
+          <h2>Eyeshadow</h2>
+        </div>
+        <div class="Eyeshadow_products">
+          <div class="_eye_product">
+            <img src="images/lipstics.webp" alt="">
+            <div class="quantity">
+              <p>Brand</p>
+              <p>Color</p>
+              <p>Quantity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Eyeliner" id="Eyeliner">
+        <div class="Eyeliner_heading">
+          <h2>Eyeliner</h2>
+        </div>
+        <div class="Eyeliner_products">
+          <div class="_product">
+            <img src="images/lipstics.webp" alt="">
+            <div class="quantity">
+              <p>Brand</p>
+              <p>Color</p>
+              <p>Quantity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Mascara" id="Mascara">
+        <div class="Mascara_heading">
+          <h2>Mascara</h2>
+        </div>
+        <div class="Mascara_products">
+        </div>
+      </div>
+      <div class="Eyebrow" id="Eyebrow">
+        <div class="Eyebrow_heading">
+          <h2>Eyebrow Pencil</h2>
+        </div>
+        <div class="Eyebrow_products">
+        </div>
+      </div>
+      <div class="Eyebrow_Gel" id="Eyebrow_Gel">
+        <div class="Eyebrow_Gel_heading">
+          <h2>Eyebrow Gel</h2>
+        </div>
+        <div class="Eyebrow_Gel_products">
+        </div>
+      </div>
+      <div class="Eyelash_Curler" id="Eyelash_Curler">
+        <div class="Eyelash_Curler_heading">
+          <h2>Eyelash Curler</h2>
+        </div>
+        <div class="Eyelash_Curler_products">
+        </div>
+      </div>
+      <div class="Eye_Primer" id="Eye_Primer">
+        <div class="Eye_Primer_heading">
+          <h2>Eye Primer</h2>
+        </div>
+        <div class="Eye_Primer_products">
+        </div>
+      </div>
+    </div>
+    <!-- Eyes Make Up Items -->
+    <div class="eyes_make_up_products" id="eyes_make_up_products" style="display: none;">
+      <div class="heading_container">
+        <h2>Dabooo Cosmetics "Eye Make Up"</h2>
+        <button id="addNewEyeMakeUp">Add New Item</button>
+      </div>
+      <div id="EyeproductFormContainer" style="display: none;">
+        <div id="EyesProductForm">
+          <label for="eyeproductCategory">Category:</label>
+          <select id="eyeproductCategory">
+            <option selected>--SELECT--</option>
+            <option value="Eyeshadow">Eyeshadow</option>
+            <option value="Eyeliner">Eyeliner</option>
+            <option value="Mascara">Mascara</option>
+            <option value="Eyebrow Pencil">Eyebrow Pencil</option>
+            <option value="Eyebrow Gel">Eyebrow Gel</option>
+            <option value="Eyelash Curler">Eyelash Curler</option>
+            <option value="Eye Primer">Eye Primer</option>
+            <!-- Add other categories as needed -->
+          </select>
+          <label for="EyeproductBrand">Brand:</label>
+          <input type="text" id="EyeproductBrand" required>
+          <label for="EyeproductPrice">Price:</label>
+          <input type="number" id="EyeproductPrice" required>
+          <label for="EyeproductColor">Color:</label>
+          <input type="text" id="EyeproductColor" required>
+          <label for="EyeproductImage">Image:</label>
+          <input type="file" id="EyeproductImage" required>
+          <button type="submit" id="submitNewEyeProduct">Save Product</button>
+        </div>
+      </div>
+      <div class="Eyeshadow" id="Eyeshadow">
+        <div class="Eyeshadow_heading">
+          <h2>Eyeshadow</h2>
+        </div>
+        <div class="Eyeshadow_products">
+          <div class="_eye_product">
+            <img src="images/lipstics.webp" alt="">
+            <div class="quantity">
+              <p>Brand</p>
+              <p>Color</p>
+              <p>Quantity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Eyeliner" id="Eyeliner">
+        <div class="Eyeliner_heading">
+          <h2>Eyeliner</h2>
+        </div>
+        <div class="Eyeliner_products">
+          <div class="_product">
+            <img src="images/lipstics.webp" alt="">
+            <div class="quantity">
+              <p>Brand</p>
+              <p>Color</p>
+              <p>Quantity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Mascara" id="Mascara">
+        <div class="Mascara_heading">
+          <h2>Mascara</h2>
+        </div>
+        <div class="Mascara_products">
+        </div>
+      </div>
+      <div class="Eyebrow" id="Eyebrow">
+        <div class="Eyebrow_heading">
+          <h2>Eyebrow Pencil</h2>
+        </div>
+        <div class="Eyebrow_products">
+        </div>
+      </div>
+      <div class="Eyebrow_Gel" id="Eyebrow_Gel">
+        <div class="Eyebrow_Gel_heading">
+          <h2>Eyebrow Gel</h2>
+        </div>
+        <div class="Eyebrow_Gel_products">
+        </div>
+      </div>
+      <div class="Eyelash_Curler" id="Eyelash_Curler">
+        <div class="Eyelash_Curler_heading">
+          <h2>Eyelash Curler</h2>
+        </div>
+        <div class="Eyelash_Curler_products">
+        </div>
+      </div>
+      <div class="Eye_Primer" id="Eye_Primer">
+        <div class="Eye_Primer_heading">
+          <h2>Eye Primer</h2>
+        </div>
+        <div class="Eye_Primer_products">
+        </div>
+      </div>
+    </div>
+
     <!-- All New Products Page -->
     <div
       class="all_new_products_container"
-      style="display: block"
+      style="display: none"
       id="allProducts"
     >
       <div class="heading_container">
@@ -131,36 +638,29 @@
     <!-- Lipstics -->
     <div class="lipstics_container" style="display: none" id="lipsticss">
       <div class="heading_container">
-        <h2>Dabooo Cosmetics "Lipstics"</h2>
+        <h2>Dabooo Cosmetics "Make Up"</h2>
         <div class="add_new_lipstics">
           <button id="addLipstics">Add New Brand</button>
         </div>
       </div>
-      <div class="add_lipstics_form" id="add_lipstics_form" style="display: none">
+      <div
+        class="add_lipstics_form"
+        id="add_lipstics_form"
+        style="display: none"
+      >
         <input type="text" id="lipsticCat" placeholder="Brand" />
         <input type="text" id="lipsticColor" placeholder="Color" />
-        <input type="number" id="lipsticPrice" placeholder="$ Price">
+        <input type="number" id="lipsticPrice" placeholder="$ Price" />
         <input type="file" id="lipsticsImage" accept="image/*" />
         <button id="saveLipstics">Save</button>
       </div>
-      <div class="category_lips" id="category_lips">
-        <div class="lipstics">
-          <img src="images/lipstics.webp" alt="" />
-          <p class="brand">Swiss Beauty</p>
-          <p class="clr">Color</p>
-          <p class="amt">Price</p>
-          <div>
-            <p>Quantity</p>
-            <button id="decreaseBtn">-</button>
-            <input type="number" id="quantityInput" value="0" readonly />
-            <button id="increaseBtn">+</button>
-          </div>
-        </div>
-      </div>
+      <div class="category_lips" id="category_lips"></div>
     </div>
 
+    <script src="search.js"></script>
     <script src="script.js"></script>
     <script src="purses.js"></script>
     <script src="lipstics.js"></script>
+    <script src="makeup.js"></script>
   </body>
 </html>
