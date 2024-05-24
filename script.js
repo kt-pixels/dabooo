@@ -1,7 +1,7 @@
-const allProduct_btn = document.getElementById("allProduct_btn");
+// const allProduct_btn = document.getElementById("allProduct_btn");
 const addProduct_btn = document.getElementById("addProduct_btn");
 const purses_btn = document.getElementById("purses_btn");
-const lipstics_btn = document.getElementById("lipstics_btn");
+// const lipstics_btn = document.getElementById("lipstics_btn");
 
 const allProducts = document.getElementById("allProducts");
 const addProducts = document.getElementById("addProducts");
@@ -20,20 +20,20 @@ const productsList = document.getElementById("productsList");
 
 let editProductId = null;
 
-allProduct_btn.addEventListener("click", () => {
-  if (
-    allProducts.style.display === "none" ||
-    allProducts.style.display === ""
-  ) {
-    allProducts.style.display = "block";
-    addProducts.style.display = "none";
-    purses.style.display = "none";
-    lipsticss.style.display = "none";
-    displayProducts();
-  } else {
-    allProducts.style.display = "block";
-  }
-});
+// allProduct_btn.addEventListener("click", () => {
+//   if (
+//     allProducts.style.display === "none" ||
+//     allProducts.style.display === ""
+//   ) {
+//     allProducts.style.display = "block";
+//     addProducts.style.display = "none";
+//     purses.style.display = "none";
+//     lipsticss.style.display = "none";
+//     displayProducts();
+//   } else {
+//     allProducts.style.display = "block";
+//   }
+// });
 
 addProduct_btn.addEventListener("click", () => {
   if (
@@ -63,16 +63,16 @@ purses_btn.addEventListener("click", () => {
   }
 });
 
-lipstics_btn.addEventListener("click", () => {
-  if (lipsticss.style.display === "none" || lipsticss.style.display === "") {
-    lipsticss.style.display = "block";
-    purses.style.display = "none";
-    addProducts.style.display = "none";
-    allProducts.style.display = "none";
-  } else {
-    lipsticss.style.display = "block";
-  }
-});
+// lipstics_btn.addEventListener("click", () => {
+//   if (lipsticss.style.display === "none" || lipsticss.style.display === "") {
+//     lipsticss.style.display = "block";
+//     purses.style.display = "none";
+//     addProducts.style.display = "none";
+//     allProducts.style.display = "none";
+//   } else {
+//     lipsticss.style.display = "block";
+//   }
+// });
 
 saveProduct_btn.addEventListener("click", () => {
   const productName = document.getElementById("productName").value;

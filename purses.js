@@ -1,8 +1,8 @@
-const addPursesBtn = document.getElementById("addPurses");
-const addPursesForm = document.getElementById("add_purses_form");
-const savePursesDetailsBtn = document.getElementById("savePurses");
+const addPursesBtn = document.getElementById("addPurses_btn");
+const addPursesForm = document.getElementById("PursesFormContainer");
+const savePursesDetailsBtn = document.getElementById("submitNewPurse");
 
-const allPursesDiv = document.getElementById("all_purses");
+const allPursesDiv = document.getElementById("All_purses");
 
 let editPurseId = null;
 
@@ -18,17 +18,15 @@ addPursesBtn.addEventListener("click", () => {
 });
 
 savePursesDetailsBtn.addEventListener("click", () => {
-  const purseColor = document.getElementById("purseColor").value;
-  const pursePrice = document.getElementById("pursePrice").value;
-  const purseImageFile = document.getElementById("purseImage").files[0];
+  const pursePrice = document.getElementById("PursePrice").value;
+  const purseImageFile = document.getElementById("PurseImage").files[0];
 
-  if (purseColor && pursePrice && purseImageFile) {
+  if (pursePrice && purseImageFile) {
     const reader = new FileReader();
     reader.onload = function (event) {
       const purseImages = event.target.result;
       const purseData = {
         id: editPurseId ? editPurseId : "purses_" + new Date().getTime(),
-        color: purseColor,
         price: pursePrice,
         image: purseImages,
       };
@@ -54,17 +52,34 @@ const displayPurseData = () => {
     if (key.startsWith("purses_")) {
       const purseData = JSON.parse(localStorage.getItem(key));
       const purseDiv = document.createElement("div");
-      purseDiv.className = "purse";
+      purseDiv.className = "purse_product";
 
       purseDiv.innerHTML = `
+      <div style="display: flex; justify-content: space-between;">
+        <button 
+        onclick="editPurses('${purseData.id}')"
+        style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        "
+        ><span class="material-symbols-outlined" style="color: #ffb74d">
+        edit
+        </span></button>
+        <button 
+        onclick="deletePurses('${purseData.id}')"
+        style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        "
+        ><span class="material-symbols-outlined" style="color: #f44336">
+        delete
+        </span></button>
+        </div>
             <img src="${purseData.image}" alt="" />
           <div>
-            <p>Color : ${purseData.color}</p>
-            <p>Price : $${purseData.price}</p>
-          </div>
-          <div>
-            <button onClick="editPurses('${purseData.id}')">Edit</button>
-            <button onClick="deletePurses('${purseData.id}')">Delete</button>
+            <p>Price : Rs.${purseData.price}</p>
           </div>
             `;
 
@@ -78,9 +93,7 @@ displayPurseData();
 const editPurses = (id) => {
   const purseData = JSON.parse(localStorage.getItem(id));
   if (purseData) {
-    document.getElementById("purseColor").value = purseData.color;
-    document.getElementById("pursePrice").value = purseData.price;
-    document.getElementById("purseImage").files[0] = purseData.image;
+    document.getElementById("PursePrice").value = purseData.price;
     editPurseId = id;
     addPursesForm.style.display = "block";
   }
@@ -92,7 +105,6 @@ const deletePurses = (id) => {
 };
 
 const clearPurseForm = () => {
-  document.getElementById("purseColor").value = "";
-  document.getElementById("pursePrice").value = "";
-  document.getElementById("purseImage").value = "";
+  document.getElementById("PursePrice").value = "";
+  document.getElementById("PurseImage").value = "";
 };

@@ -56,18 +56,18 @@ h2 {
   padding-block: 0;
 }
 
-.products > .products_list > p{
+.products > .products_list > p {
   padding-block-start: 5px;
   border-bottom: 1px solid #cdcdcd;
   cursor: pointer;
   transition: all 0.2s ease-in;
 }
 
-.products > .products_list > p:hover{
+.products > .products_list > p:hover {
   color: orangered;
 }
 
-.products > .products_list > p:last-child{
+.products > .products_list > p:last-child {
   border-bottom: 0;
 }
 
@@ -119,20 +119,27 @@ h2 {
 .purses_container,
 .lipstics_container,
 .eyes_make_up_products,
-.no_page_is_open {
+.no_page_is_open,
+.lips_make_up_products,
+.cheeks_make_up_products,
+.Tools_make_up_products,
+.skin_care_products,
+.hair_care_products,
+.body_care_products,
+.nail_care_products {
   margin-left: 20%;
 }
 
-.no_page_is_open > .main-heading > h2{
+.no_page_is_open > .main-heading > h2 {
   border-bottom: none;
   display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-size: 30px;
-    color: #565656;
-    margin: 0;
-    background-color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 30px;
+  color: #565656;
+  margin: 0;
+  background-color: whitesmoke;
 }
 
 .heading_container {
@@ -240,7 +247,7 @@ h2 {
   justify-content: space-between;
 }
 
-.purse {
+/* .purse {
   margin: 10px;
   padding: 10px;
   background-color: gray;
@@ -250,9 +257,9 @@ h2 {
 .purse > img {
   width: 200px;
   border-radius: 5px;
-}
+} */
 
-.purse > div {
+/* .purse > div {
   display: flex;
   justify-content: space-between;
   margin-block-start: 10px;
@@ -264,9 +271,9 @@ h2 {
   border: none;
   border-radius: 5px;
   margin-block-start: 10px;
-}
+} */
 
-.add_new_purses {
+/* .add_new_purses {
   position: absolute;
   right: 20px;
   top: 10px;
@@ -277,9 +284,9 @@ h2 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
+} */
 
-.add_purses_form {
+/* .add_purses_form {
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -291,14 +298,14 @@ h2 {
   padding: 5px;
   border: 1px solid black;
   outline: none;
-}
+} */
 
-.add_purses_form > button {
+/* .add_purses_form > button {
   padding: 10px;
   border: none;
   border-radius: 5px;
   background-color: rgb(191, 191, 191);
-}
+} */
 
 .p_image > img {
   width: 120px;
@@ -396,25 +403,60 @@ h2 {
   flex-wrap: wrap;
 }
 
-._product, ._eye_product {
+._product,
+.eyes_product,
+.lips_product,
+.tools_product,
+.SkinCare_product,
+.HairCare_product,
+.BodyCare_product,
+/* .All_purses, */
+.purse_product {
   margin: 10px;
   padding: 5px;
-  background-color: gray;
-  border-radius: 6px;
+  background-color: #dbdbdb;
+    border-radius: 10px;
+    border: 4px groove;
+}
+
+.quantity{
+  display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.quantity > p {
+  border-bottom: 1px solid;
+  padding-block-end: 5px;
 }
 
 ._product > img,
-._eye_product > img {
+.eyes_product > img,
+.lips_product > img,
+.tools_product > img,
+.SkinCare_product > img,
+.HairCare_product > img,
+.BodyCare_product > img,
+.purse_product > img {
   width: 178px;
   height: 178px;
   border-radius: 4px;
+  margin-block-start: 6px;
+    border: 1px solid;
 }
 
-.quantity > p:nth-child(3) > input {
+.quantity > p:nth-child(4){
+  border-bottom: 0;
+  padding-block-end: 0px;
+  padding-block-start: 5px;
+}
+
+.quantity > p:nth-child(4) > input {
   width: 36px;
+
 }
 
-.quantity > p:nth-child(3) > button {
+.quantity > p:nth-child(4) > button {
   padding: 5px;
 }
 
@@ -431,7 +473,15 @@ h2 {
   width: 150px;
 }
 
-#FaceProductForm, #EyesProductForm {
+#FaceProductForm,
+#EyesProductForm,
+#LipsProductForm,
+#ToolsProductForm,
+#SkinCareProductForm,
+#HairCareProductForm,
+#BodyCareProductForm,
+#NailCareProductForm,
+#add_purses_form {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -443,14 +493,36 @@ h2 {
 input,
 #submitNewProduct,
 #eyeproductCategory,
-#submitNewEyeProduct {
+#submitNewEyeProduct,
+#submitNewLipsProduct,
+#lipsproductCategory,
+#ToolsproductCategory,
+#submitNewToolsProduct,
+#SkinCareproductCategory,
+#submitNewSkinCareProduct,
+#HairCareproductCategory,
+#submitNewHairCareProduct,
+#BodyCareproductCategory,
+#submitNewBodyCareProduct,
+#NailCareproductCategory,
+#submitNewNailCareProduct,
+#submitNewPurse {
   padding: 5px;
   border: 2px solid #bbbbbb;
   border-radius: 7px;
   cursor: pointer;
 }
 
-#addNewMakeUp, #addNewEyeMakeUp {
+#addNewMakeUp,
+#addNewEyeMakeUp,
+#addNewLipsMakeUp,
+#addNewcheeksMakeUp,
+#addNewToolsMakeUp,
+#addNewSkinCare,
+#addNewHairCare,
+#addNewBodyCare,
+#addNewNailCare,
+#addPurses_btn {
   position: absolute;
   right: 20px;
   top: 14px;
@@ -458,13 +530,84 @@ input,
   cursor: pointer;
 }
 
+/* Eye products */
 .Eyeshadow_products,
 .Eyeliner_products,
 .Mascara_products,
-.Eyebrow_products,
+.Eyebrow_Pencil_products,
 .Eyebrow_Gel_products,
 .Eyelash_Curler_products,
-.Eye_Primer_products{
+.Eye_Primer_products {
   display: flex;
   flex-wrap: wrap;
+}
+
+/* Lipstics products */
+.Lipstick_products,
+.Lip_Gloss_products,
+.Lip_Liner_products,
+.Lip_Balm_products,
+.Lip_Stain_products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Cheeks products */
+.Blush_products,
+.Bronzer_products,
+.Highlighters_products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Make up Tools products */
+.Makeup_Brushes_products,
+.Beauty_Blender_products,
+.Tweezers_products,
+.Makeup_Remover_products,
+.Makeup_Brush_Cleaner_products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* SKIN CARE */
+.Cleanser_products,
+.Toner_products,
+.Moisturizer_products,
+.Serum_products,
+.Face_Oil_products,
+.Sunscreen_products,
+.Face_Mask_products,
+.Eye_Cream_products{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* HAIR CARE */
+.Shampoo_products,
+.Conditioner_products,
+.Hair_Oil_products,
+.Hair_Color_products,
+.Hair_Serum_products,
+.Hair_Spray_products,
+.Dry_Shampoo_products,
+.Body_Wash_products,
+.Body_Lotion_products,
+.Body_Scrub_products,
+.Body_Butter_products,
+.Hand_Cream_products,
+.Foot_Cream_products,
+.Nail_Polish_products,
+.Nail_Polish_Remover_products,
+.Nail_Clippers_products,
+.Nail_File_products,
+.Cuticle_Oil_products,
+.All_purses{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.purses_products{
+  margin-left: 20%;
 }
