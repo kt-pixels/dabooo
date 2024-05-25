@@ -816,14 +816,12 @@
       // console.log(`${mb} MB is equal to ${gb} GB`);
     </script>
     <script>
-      const loginData = {
-      ownername: "Rubeena_Cosmetics",
-      password: "rubeena_1234@",
-    }
+      const Owner_name = "Rubeena_Cosmetics"
+      const Password = "rubeena_1234@"
 
     // Save the login data to localStorage only if it doesn't already exist
     if (!localStorage.getItem('loginData')) {
-      localStorage.setItem('loginData', JSON.stringify(loginData))
+      localStorage.setItem('loginData', JSON.stringify([]))
     }
 
     const login_btn = document.getElementById('login_btn')
@@ -848,7 +846,7 @@
         document.getElementById('password').value = ""
       }
 
-      if(enteredOwnerName === storedLoginData.ownername && enteredPassword === storedLoginData.password){
+      if(enteredOwnerName === Owner_name && enteredPassword === Password){
         localStorage.setItem("isloggedin", 'true')
         HomePageContainer.style.display = 'block'
         login_Page_Container.style.display = 'none'
